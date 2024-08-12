@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;1,400&display=swap");
+
+:root {
+  --main: #b4e380;
+  --green: #88d66c;
+  --white: #fff;
+  --green1: #06d001;
+  --black: #000;
+  --red: #ff0000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", serif;
+}
+
+body {
+  background-color: var(--main);
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+main > h1 {
+  text-align: center;
+}
+
+main > h1:first-child {
+  margin-bottom: 0.3em;
+}
+
+main > h1:nth-child(2) {
+  max-width: 350px;
+  line-height: 1.1;
+  font-size: 2.5em;
+  text-transform: uppercase;
+}
+
+.input-number {
+  width: 450px;
+  background-color: var(--green);
+  display: flex;
+  flex-direction: column;
+  padding: 1.5em 2em;
+  margin: 1em 0;
+  align-items: center;
+  border-radius: 10px;
+  border: 3px solid var(--white);
+}
+
+.input-number > label {
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: center;
+}
+
+.input-number > input {
+  width: 100%;
+  margin: 1em 0;
+  background-color: var(--main);
+  border: 1px solid var(--white);
+  outline: unset;
+  padding: 0.2em 0.5em;
+  font-size: 1.2em;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.input-number > input:focus {
+  box-shadow: 0 0 3px 1px var(--white);
+}
+
+.input-number > button {
+  background-color: var(--green1);
+  border: 1px solid var(--green1);
+  color: var(--black);
+  width: 100%;
+  padding: 0.5em;
+  font-size: 1.2em;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.input-number > button:hover {
+  background-color: #059212;
+  color: var(--white);
+  box-shadow: 0 0 10px 1px var(--green1);
+}
+
+main > div:last-child {
+  width: 450px;
+  background-color: var(--green);
+  text-align: center;
+  padding: 0.3em 1em;
+  border: 3px solid var(--white);
+  border-radius: 10px;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.hidden {
+  display: none;
+}
+
+main > div.invalid {
+  border: 3px solid var(--red);
+  color: var(--red);
+  background-color: #ffa27f;
+  font-weight: normal;
+  font-size: 1.5rem;
+}
+
+@media (max-width: 576px) {
+  .input-number,
+  main > div:last-child,
+  .input-number > button,
+  .input-number > input {
+    padding-left: 0.8em;
+    padding-right: 0.8em;
+  }
+}
