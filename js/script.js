@@ -4,7 +4,8 @@ const output = document.getElementById("output");
 
 button.addEventListener("click", function () {
   const iNumber = input.value;
-  const checkNumber = /(^-)?\d+/;
+  const checkNumber = /^(^-)?\d+$/;
+  console.log(checkNumber.test(iNumber));
   if (checkNumber.test(iNumber)) {
     if (iNumber < 1) {
       output.classList.remove("hidden");
