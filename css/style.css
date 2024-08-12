@@ -127,4 +127,10 @@ main > div.invalid {
     padding-left: 0.8em;
     padding-right: 0.8em;
   }
+
+  .input-number,
+  main > div:last-child {
+    width: unset;
+    max-width: 400px;
+  }
 }
